@@ -1,0 +1,20 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: config
+    profiles:
+      active:  native #使用本地配置
+    cloud:
+      config:
+        server:
+          native:
+            search-locations: classpath:/config/{application}
+          git:
+            url: https://gitee.com/macrozheng/mall-config.git
+            username: macro
+            password: 123456
+            clone-on-start: true
+            search-paths: '{application}'
+
+

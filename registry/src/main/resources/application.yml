@@ -1,0 +1,13 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: registry
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    fetch-registry: false #是否从eureka Server获取注册的服务信息，默认true
+    register-with-eureka: false #是否把自己注册到服务器上，默认true
+  server:
+    enable-self-preservation: false #关闭保护模式
